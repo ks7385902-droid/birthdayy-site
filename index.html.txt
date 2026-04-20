@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>For My TanTan 💖</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins:wght@300;500&display=swap" rel="stylesheet">
+
+<style>
+body {
+  margin:0;
+  font-family:'Poppins',sans-serif;
+  overflow:hidden;
+  background:linear-gradient(135deg,#ffdde1,#ee9ca7);
+  color:white;
+}
+
+/* Animated background */
+body::before {
+  content:"";
+  position:fixed;
+  width:200%;
+  height:200%;
+  background:linear-gradient(45deg,#ff9a9e,#fad0c4,#fad0c4,#ffdde1);
+  animation:bgMove 10s infinite linear;
+  z-index:-1;
+}
+@keyframes bgMove {
+  0%{transform:translate(0,0);}
+  50%{transform:translate(-25%,-25%);}
+  100%{transform:translate(0,0);}
+}
+
+/* LOCK SCREEN */
+#lock {
+  position:fixed;
+  width:100%;
+  height:100%;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  backdrop-filter:blur(20px);
+}
+
+.pin input {
+  width:40px;
+  height:40px;
+  margin:5px;
+  text-align:center;
+  font-size:20px;
+  border-radius:10px;
+  border:none;
+}
+
+button {
+  padding:10px 20px;
+  border:none;
+  border-radius:20px;
+  background:white;
+  color:#ff4d6d;
+  cursor:pointer;
+}
+
+/* MAIN */
+#main {display:none; text-align:center; padding:20px;}
+
+h1 {
+  font-family:'Playfair Display';
+  font-size:45px;
+}
+
+/* NAV */
+.nav button {
+  margin:5px;
+}
+
+/* SECTIONS */
+.section {
+  display:none;
+  animation:fade 1s;
+}
+@keyframes fade {
+  from{opacity:0; transform:translateY(20px);}
+  to{opacity:1;}
+}
+
+/* GALLERY */
+.polaroid {
+  display:inline-block;
+  background:white;
+  padding:10px;
+  margin:10px;
+  border-radius:10px;
+  transform:rotate(-3deg);
+}
+.polaroid img {
+  width:150px;
+  border-radius:10px;
+}
+
+/* LOVE LETTER */
+.flip {
+  perspective:1000px;
+}
+.card {
+  width:250px;
+  height:150px;
+  margin:auto;
+  transform-style:preserve-3d;
+  transition:1s;
+}
+.card:hover {
+  transform:rotateY(180deg);
+}
+.front, .back {
+  position:absolute;
+  width:100%;
+  height:100%;
+  backface-visibility:hidden;
+  border-radius:15px;
+  padding:20px;
+}
+.front {background:#fff; color:#ff4d6d;}
+.back {
+  background:#ff4d6d;
+  transform:rotateY(180deg);
+}
+
+/* GIFTS */
+.gift {
+  background:white;
+  color:#ff4d6d;
+  padding:15px;
+  margin:10px;
+  border-radius:15px;
+  cursor:pointer;
+}
+
+/* MUSIC BUTTON */
+#musicBtn {
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  background:white;
+  color:#ff4d6d;
+  border-radius:50%;
+  padding:15px;
+}
+
+/* CONFETTI */
+.confetti {
+  position:fixed;
+  width:10px;
+  height:10px;
+  background:red;
+  animation:fall 3s linear infinite;
+}
+@keyframes fall {
+  from{transform:translateY(-10vh);}
+  to{transform:translateY(100vh);}
+}
+</style>
+</head>
+
+<body>
+
+<!-- LOCK -->
+<div id="lock">
+  <h2>Enter PIN 💌</h2>
+  <div class="pin">
+    <input maxlength="1"><input maxlength="1"><input maxlength="1"><input maxlength="1">
+  </div>
+  <button onclick="unlock()">Unlock</button>
+</div>
+
+<!-- MAIN -->
+<div id="main">
+
+<h1>Happy Birthday My Love 💖</h1>
+
+<!-- COUNTDOWN -->
+<p id="countdown"></p>
+
+<div class="nav">
+  <button onclick="show('wishes')">Wishes</button>
+  <button onclick="show('memories')">Memories</button>
+  <button onclick="show('gifts')">Gifts</button>
+  <button onclick="show('letter')">Letter</button>
+</div>
+
+<!-- WISHES -->
+<div id="wishes" class="section">
+  <p>You are my forever, my always 💕</p>
+</div>
+
+<!-- MEMORIES -->
+<div id="memories" class="section">
+  <div class="polaroid"><img src="photo1.jpg"></div>
+  <div class="polaroid"><img src="photo2.jpg"></div>
+</div>
+
+<!-- GIFTS -->
+<div id="gifts" class="section">
+  <div class="gift" onclick="alert('Playlist unlocked 🎵')">🎵 Playlist</div>
+  <div class="gift" onclick="alert('100 reasons I love you 💖')">💌 Love Notes</div>
+</div>
+
+<!-- LETTER -->
+<div id="letter" class="section flip">
+  <div class="card">
+    <div class="front">Open Me 💌</div>
+    <div class="back">Hey love,
+
+I don’t even know where to start because there are so many little things about you that make my world feel softer, warmer, and somehow brighter. You walked into my life so quietly, but now you’re everywhere in it—in my thoughts, in my smiles, in all the moments I wish I could freeze forever.
+
+I love the way you exist. The way you talk, the way you laugh, the way you care without even trying. You make ordinary days feel special just by being there. Even the smallest conversations with you stay with me longer than they should, and I don’t think I’ll ever get tired of that.
+
+You’ve become my comfort, my safe place, and honestly, my favorite person. With you, I don’t feel like I have to pretend or be anything other than myself—and that means everything to me.
+
+Sometimes I wonder how I got so lucky to have you. And even if I never figure that out, I know one thing for sure—I’m really, really grateful that I did.
+
+I love you more than I can properly put into words, but I hope you feel it in everything I do.
+
+Always yours 💖
+I love you endlessly ❤️</div>
+  </div>
+</div>
+
+</div>
+
+<!-- MUSIC -->
+<audio id="music" loop>
+  <source src="https://youtu.be/nz3xfq9OMQc?si=Zerp77uVXLyD-5CC">
+</audio>
+
+<button id="musicBtn" onclick="toggleMusic()">🎵</button>
+
+<script>
+function unlock(){
+  let inputs=document.querySelectorAll(".pin input");
+  let pin="";
+  inputs.forEach(i=>pin+=i.value);
+  if(pin==="1708"){
+    document.getElementById("lock").style.display="none";
+    document.getElementById("main").style.display="block";
+    startConfetti();
+  } else alert("Wrong PIN 😢");
+}
+
+function show(id){
+  document.querySelectorAll(".section").forEach(s=>s.style.display="none");
+  document.getElementById(id).style.display="block";
+}
+
+function toggleMusic(){
+  let music=document.getElementById("music");
+  music.paused?music.play():music.pause();
+}
+
+/* COUNTDOWN */
+let date=new Date("2026-08-08");
+setInterval(()=>{
+  let now=new Date();
+  let diff=date-now;
+  document.getElementById("countdown").innerText=
+  Math.floor(diff/1000/60/60/24)+" days left 💖";
+},1000);
+
+/* CONFETTI */
+function startConfetti(){
+  setInterval(()=>{
+    let c=document.createElement("div");
+    c.classList.add("confetti");
+    c.style.left=Math.random()*100+"vw";
+    c.style.background=["#ff4d6d","#fff","#ffd6e0"][Math.floor(Math.random()*3)];
+    document.body.appendChild(c);
+    setTimeout(()=>c.remove(),3000);
+  },200);
+}
+</script>
+
+</body>
+</html>
